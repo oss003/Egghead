@@ -90,8 +90,8 @@ Current file: egghead.asm
 002300  2               L0087       = $0087	; Laserbeam pause time
 002300  2               L0088       = $0088
 002300  2               
-002300  2               L09E0       = $0ae0
-002300  2               L0B00       = $0c00
+002300  2               L09E0       = $0be0
+002300  2               L0B00       = $0d00
 002300  2               
 002300  2               L6220       = $6220
 002300  2               L6360       = $6360
@@ -3593,7 +3593,7 @@ Current file: egghead.asm
 004EC4  2  18                       clc                    ; 18
 004EC5  2  69 E0                    adc #<L09E0               ; 69 E0
 004EC7  2  85 72                    sta L0072              ; 85 72
-004EC9  2  A9 0A                    lda #>L09E0               ; A9 09
+004EC9  2  A9 0B                    lda #>L09E0               ; A9 09
 004ECB  2  65 73                    adc L0073              ; 65 73
 004ECD  2  85 73                    sta L0073              ; 85 73
 004ECF  2               
@@ -4560,7 +4560,7 @@ Current file: egghead.asm
 00549C  2  CA           L4223:      dex                    ; CA
 00549D  2  30 0D                    bmi L4233              ; 30 0D
 00549F  2  BD D7 54                 lda L425B,X            ; BD 5B 42
-0054A2  2  DD 00 0C                 cmp L0B00,X            ; DD 00 0B
+0054A2  2  DD 00 0D                 cmp L0B00,X            ; DD 00 0B
 0054A5  2  F0 F5                    beq L4223              ; F0 F5
 0054A7  2               
 0054A7  2  A2 01                    ldx #$01               ; 'Code not valid'
@@ -4943,7 +4943,7 @@ Current file: egghead.asm
 00569D  2               
 00569D  2  A9 E0        L4438:      lda #<L09E0               ; A9 E0
 00569F  2  85 78                    sta L0078              ; 85 78
-0056A1  2  A9 0A                    lda #>L09E0               ; A9 09
+0056A1  2  A9 0B                    lda #>L09E0               ; A9 09
 0056A3  2  85 79                    sta L0079              ; 85 79
 0056A5  2               
 0056A5  2  A6 53                    ldx L0053              ; Room pointer
@@ -5205,7 +5205,7 @@ Current file: egghead.asm
 0057F6  2  20 63 4E                 jsr L3BEF              ; Locate cursor at X,Y
 0057F9  2               
 0057F9  2  A2 03                    ldx #$03               ; Print password
-0057FB  2  BD 00 0C     L459F:      lda L0B00,X            ; BD 00 0B
+0057FB  2  BD 00 0D     L459F:      lda L0B00,X            ; BD 00 0B
 0057FE  2  20 8A 61                 jsr LFFEE              ; OSWRCH
 005801  2  CA                       dex                    ; CA
 005802  2  10 F7                    bpl L459F              ; 10 F7
@@ -6113,7 +6113,7 @@ Current file: egghead.asm
 005D31  2  B0 F5                    bcs L4AAD              ; B0 F5
 005D33  2               
 005D33  2  A6 70                    ldx L0070              ; A6 70
-005D35  2  9D 00 0C                 sta L0B00,X            ; 9D 00 0B
+005D35  2  9D 00 0D                 sta L0B00,X            ; 9D 00 0B
 005D38  2  CA                       dex                    ; CA
 005D39  2  10 EB                    bpl L4AAB              ; 10 EB
 005D3B  2  60                       rts                    ; 60
